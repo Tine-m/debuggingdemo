@@ -3,7 +3,8 @@ package dk.ek.exercises;
 /**
  * purpose: to exercise debugging skills
  * 1. Use main method OR Create a junit test for this class
- * 2. Setup a test that asserts false for the ex1 method call
+ * 2. Set up a test that asserts false for the ex1 method call
+ *  (if you use main method, simply call method and see result in console window)
  * 3. Set appropriate breakpoint(s)
  * 3. Run the debugger from inside the test and find out why ex1 is not producing 'false'
  */
@@ -30,7 +31,6 @@ public class Ex01BankAccount {
         public double getBalance() {
             return balance;
         }
-
 
     }
     public boolean ex1() {
