@@ -8,29 +8,25 @@ import java.util.List;
 public class DebuggingDemo {
     public static void main(String[] args) {
         demoCollection();
-//        String name = null;
-//
-//        Integer namelength = Integer.parseInt(name);
-////        System.out.println(name.length());
     }
 
     public static void demoCollection() {
         DebuggingDemo demo = new DebuggingDemo();
 
-//            System.out.println("Out of Bound");
-//            demo.outOfBoundDemo();
+        //System.out.println("Out of Bound");
+        //demo.outOfBoundDemo();
 
         System.out.println("NullPointer");
         demo.nullPointerDemo();
 
-//        System.out.println("Infinite loop");
-//        demo.infiniteLoop();
+        // System.out.println("Infinite loop");
+        // demo.infiniteLoop();
 
-//        System.out.println("Calculate error");
-//        demo.calculateError();
+        // System.out.println("Calculate error");
+        // demo.calculateError();
 
-//        System.out.println("Stream debugging");
-//        demo.streamDebugging()iwull;
+        //  System.out.println("Stream debugging");
+        // demo.streamDebugging();
     }
 
     public void outOfBoundDemo() {
@@ -52,7 +48,7 @@ public class DebuggingDemo {
         }
     }
 
-    public void infiniteLoop(){
+    public void infiniteLoop() {
         int i = 1;
         while (i != 10) { // bug: i will skip 10
             i += 2;
@@ -60,15 +56,15 @@ public class DebuggingDemo {
         }
     }
 
-    public void calculateError(){
+    public void calculateError() {
         int result = new Calculator().multiply(4, 5);
-        System.out.println("Result: "+ result);
+        System.out.println("Result: " + result);
     }
 
     /**
      * Use 'Trace current stream chain' in IntelliJ to debug the stream
      */
-    public void streamDebugging(){
+    public void streamDebugging() {
         List<Student> students = List.of(
                 new Student("Alice", 85),
                 new Student("Bob", 70),
@@ -83,15 +79,17 @@ public class DebuggingDemo {
         System.out.println("Average grade of students with grade >= 75: " + average);
     }
 
+    // Bruger Lombok bibliotek, der genererer kode ved compile-time.
+    // Se pom.xlm
     @Data
     @AllArgsConstructor
     class Student {
         String name;
         int grade;
     }
-    @Data
-    class Calculator{
-        public int multiply(int a, int b){
+
+    class Calculator {
+        public int multiply(int a, int b) {
             return a + b; // should be *
         }
     }
