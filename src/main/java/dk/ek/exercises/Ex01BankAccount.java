@@ -20,7 +20,6 @@ public class Ex01BankAccount {
             balance -= amount;
             return true;
         } else {
-            System.out.println("Insufficient funds.");
             return false;
         }
     }
@@ -32,12 +31,6 @@ public class Ex01BankAccount {
     public static void main(String[] args) {
         Ex01BankAccount acc = new Ex01BankAccount(100);
         boolean result = acc.withdraw(120);  // should fail, but succeeds
-        System.out.println("Balance: " + acc.getBalance());
-        if (result) {
-            System.out.println("Withdrawal successful.");
-        }
-        else {
-            System.out.println("Insufficient funds.");
-        }
+       //TODO finish test
      }
 }
